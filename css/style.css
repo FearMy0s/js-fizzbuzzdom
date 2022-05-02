@@ -1,0 +1,104 @@
+:root{
+    --clr-primary-0: black;
+
+    --clr-secondary-0: white;
+    --clr-bg-0: rgb(24, 158, 6);
+    --clr-bg-1: rgb(147, 190, 204);
+    --clr-bg-2: rgb(11, 14, 214);
+    --clr-bg-3: rgb(255, 209, 102);
+    --clr-bg-4: rgb(255, 0, 60);
+
+    --gutter-xs: .25rem;
+    --gutter-sm: .5rem;
+    --gutter-md: 1rem;
+    --gutter-lg: 1.5rem;
+    --gutter-xl: 2rem;
+    --gutter-xxl: 3rem;
+
+}
+  .debug header{
+      background-color: aqua;
+  }
+
+  .debug aside{
+      background-color: black;
+  }
+
+  .debug .content{
+      background-color: coral;
+  }
+  
+  .debug footer{
+      background-color: brown;
+  }
+  
+
+body{
+    font-family: 'rotobo', sans-serif;
+    color: var(--colore-testo);
+    background-color: var(--clr-bg-0);
+}
+
+
+
+h1{
+    color: var(--clr-secondary-0);
+    text-align: center;
+    font-size: 4rem;
+    padding: var(--gutter-md);
+    font-weight: 700;
+    margin-bottom:var(--gutter-xl) ;
+
+}
+
+.container{
+    height: 84vh;
+    width: 84vh;
+    margin: auto;
+    display: grid;
+    gap: var(--gutter-sm);
+    text-align: center;
+    grid-template-columns: repeat(10, 1fr);
+}
+
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--clr-bg-1);
+    position: relative;
+    aspect-ratio: 1/1;
+}
+
+.fizz::after{
+    background-color: var(--clr-bg-2);
+    content: "fizz";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buzz::after{
+    background-color: var(--clr-bg-3);
+    content: "buzz";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fizz.buzz::after{
+    background-color: var(--clr-bg-4);
+    content: "fizzbuzz";
+}
